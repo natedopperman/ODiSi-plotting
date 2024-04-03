@@ -19,9 +19,9 @@ plt.rcParams.update({'font.size': 32})
 
 ### read in .pkl files. change file path if in different path or PC.
 
-position = pd.read_pickle(r"pickle/FLB1position.pkl")
-values = pd.read_pickle(r"pickle/FLB1values.pkl")
-time = pd.read_pickle(r"pickle/FLB1time.pkl")
+position = pd.read_pickle(r"pickle_path")
+values = pd.read_pickle(r"pickle_path")
+time = pd.read_pickle(r"pickle_path")
 
 
 values = values.fillna(0)
@@ -33,10 +33,10 @@ position = position.values.flatten()
 time = time.values.flatten()
 values = values.values.T
 
-# setting ranges for gages and times of interest
+# update values for your fiber of interest
 
-g1, g2 =  1553, 4749 ### gage range
-t1, t2 = 0, 8521 ### correponds to timestep
+g1, g2 =  0, 0 ### gage range
+t1, t2 = 0, 0 ### correponds to timestep
 
 # make position at steel deck start zero
 
